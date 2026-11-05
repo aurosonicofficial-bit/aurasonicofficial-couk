@@ -88,9 +88,10 @@ footer .flogo img{height:34px;width:auto;margin-bottom:12px}
   </div>
 
   <h2>Bu site sizden ne toplar</h2>
-  <p>Kısa cevap: hiçbir şey saklamaz.</p>
+  <p>Kısa cevap: sizi tanıyan hiçbir şey saklamaz.</p>
   <ul>
-    <li><b>Çerez kullanmıyoruz.</b> Sitede izleme çerezi, reklam pikseli ya da ziyaretçi ölçüm aracı yoktur.</li>
+    <li><b>Çerez kullanmıyoruz.</b> Sitede izleme çerezi, reklam pikseli ya da kişiyi takip eden ölçüm aracı yoktur.</li>
+    <li><b>Yalnız sayfa açılışlarını sayıyoruz.</b> Hangi sayfanın kaç kez açıldığını kendi sunucumuzdaki basit bir sayaçla sayarız. Kaydedilen: saat (saate yuvarlanmış), açılan sayfa, geldiğiniz sitenin yalnız adı (ör. google.com) ve bağlantıdaki kampanya etiketi. IP adresiniz, çerez, cihaz ya da tarayıcı kimliği kaydedilmez; kimin ziyaret ettiğini bilemeyiz. Tarayıcınızda “İzlenmesin” (Do Not Track) ayarı açıksa sayaç hiç çalışmaz.</li>
     <li><b>Keşif formu veri göndermez.</b> Forma yazdıklarınız sitemizde saklanmaz ve bir sunucuya iletilmez. Düğmeye bastığınızda metin, kendi WhatsApp ya da e-posta uygulamanızda hazır açılır; göndermek sizin kararınızdır.</li>
     <li><b>Tarayıcınızda bir şey saklamıyoruz.</b> Yerel depolama ya da benzeri bir kayıt kullanılmaz.</li>
   </ul>
@@ -102,6 +103,7 @@ footer .flogo img{height:34px;width:auto;margin-bottom:12px}
     <tr><td>GitHub Pages</td><td>Sitenin barındırılması</td></tr>
     <tr><td>Google Fonts</td><td>Yazı tiplerinin yüklenmesi</td></tr>
     <tr><td>aurasonicofficial.com</td><td>Ana sayfadaki "şu an yayında" satırı için kanal listesi</td></tr>
+    <tr><td>panel.aurasonicofficial.com</td><td>Kendi sunucumuz: çerezsiz sayfa sayacı (yukarıda anlatıldığı gibi)</td></tr>
   </table>
   <p>YouTube, WhatsApp ya da e-posta bağlantılarına tıkladığınızda o hizmetlerin kendi kuralları geçerli olur.</p>
 
@@ -132,8 +134,10 @@ footer .flogo img{height:34px;width:auto;margin-bottom:12px}
 
   <h2>Değişiklikler</h2>
   <p>Siteye çerez, ölçüm aracı ya da veri gönderen bir form eklenirse bu sayfa aynı gün güncellenir.</p>
-  <p style="color:var(--gri);margin-top:24px">Son güncelleme: 13 Ekim 2026</p>
+  <p style="color:var(--gri);margin-top:24px">Son güncelleme: 6 Kasım 2026</p>
 </div></main>
 <footer><div class="kap">© 2026 Aura Sonic Core · Aşkın İnşaat Mimarlık Yapı · <a href="index.html">Ana sayfa</a></div></footer>
+<script>/* Çerezsiz sayaç (6 Kas 2026): yalnız sayfa, gelinen sitenin adı ve kampanya etiketi; IP, çerez, kimlik yok. Ayrıntı: gizlilik.html */
+(function(){try{if(navigator.doNotTrack==="1"||!navigator.sendBeacon)return;var h="";try{h=document.referrer?new URL(document.referrer).hostname:""}catch(e){}if(h===location.hostname)h="(ic)";var q=new URLSearchParams(location.search);navigator.sendBeacon("https://panel.aurasonicofficial.com/site/say",new Blob([JSON.stringify({s:"couk",p:location.pathname,r:h,u:[q.get("utm_source"),q.get("utm_medium"),q.get("utm_campaign")].filter(Boolean).join("|")})],{type:"text/plain"}))}catch(e){}})();</script>
 </body>
 </html>
